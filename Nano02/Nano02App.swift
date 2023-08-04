@@ -11,7 +11,7 @@ import SwiftUI
 struct Nano02App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SceneManagerView()
         }
     }
 }
