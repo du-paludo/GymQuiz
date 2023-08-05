@@ -55,7 +55,7 @@ struct UpperBar: View {
                             settings.timeRemaining -= 1
                         } else {
                             repo.getNextQuestion()
-                            settings.timeRemaining = 20
+                            settings.timeRemaining = 30
                         }
                     }
                     .foregroundColor(.white)
@@ -67,11 +67,11 @@ struct UpperBar: View {
         }
         HStack {
             Image(systemName: "star.fill")
-                .font(.title3)
+                .font(.title2)
                 .foregroundColor(.white)
                 .bold()
             Text("\(settings.score)")
-                .font(.title3)
+                .font(.title2)
                 .foregroundColor(.white)
                 .bold()
         }

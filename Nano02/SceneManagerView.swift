@@ -35,7 +35,7 @@ struct SceneManagerView: View {
             case .LeaderboardView:
                 LeaderboardView(leaderboardIdentifier: "leaderboard")
                     .transition(manager.animation)
-                    .preferredColorScheme(.light)
+                    .preferredColorScheme(.dark)
             }
         }
         .environmentObject(manager)

@@ -40,7 +40,6 @@ struct LeaderboardView: View {
     }
         
     func loadLeaderboard() async {
-        //playersList.removeAll()
         Task {
             var playersListTemp : [Player] = []
             let leaderboards = try await GKLeaderboard.loadLeaderboards(IDs: [leaderboardIdentifier])
@@ -54,7 +53,7 @@ struct LeaderboardView: View {
                 }
             }
             playersListTemp.sort {
-                $0.score < $1.score
+                $0.score > $1.score
             }
             print("playersList")
             print(playersListTemp)
@@ -91,26 +90,28 @@ struct LeaderboardView: View {
             Text("Leaderboard")
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
-                .font(Font.custom("PassionOne-Bold", size: 64))
+                .font(Font.custom("PassionOne-Bold", size: 56))
             ForEach(playersList, id: \.self) { item in
-                HStack {
+                HStack(alignment: .center) {
                     Image(uiImage: item.image!)
                         .resizable()
                         .frame(width: 48, height: 48, alignment: .center)
                         .clipShape(Circle())
-                    VStack {
+                    VStack(alignment: .center) {
                         Text(item.name)
                             .fontWeight(.heavy)
                             .lineLimit(1)
                             .foregroundColor(.white)
-                            .truncationMode(.middle)
-                            .frame(minWidth:100,idealWidth:100,maxWidth:100)
+                            .truncationMode(.tail)
+                            .frame(minWidth: 160, idealWidth: 160, maxWidth: 160)
                         Text(item.score)
                             .foregroundColor(.white)
                     }
                 }
             }
+            Spacer()
         }
+        .padding(.top, 64)
         .onAppear() {
             if !GKLocalPlayer.local.isAuthenticated {
                 authenticateUser()

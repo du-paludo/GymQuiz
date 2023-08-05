@@ -12,11 +12,21 @@ struct ScoreView: View {
     @EnvironmentObject var manager: SceneManager
     @EnvironmentObject var settings: GameSettings
     let namespace: Namespace.ID
+    
+    var text: String {
+        if settings.score <= 200 {
+            return ["Keep practicing!", "Stay persistent!", "Keep going!"].randomElement()!
+        } else if settings.score > 200 && settings.score <= 400 {
+            return ["Nice!", "Congrats!", "You're on the right track!"].randomElement()!
+        } else {
+            return ["Perfect!", "Excellent job!", "Amazing!"].randomElement()!
+        }
+    }
 
     var body: some View {
         VStack(spacing: 64) {
             Spacer()
-            Text("Nice!")
+            Text(text)
                 .foregroundColor(.white)
                 .font(.title)
                 .bold()

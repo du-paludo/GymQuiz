@@ -9,5 +9,5 @@ import Foundation
 
 class GameSettings: ObservableObject {
     @Published var score = 0
-    @Published var timeRemaining = 20
+    @Published var timeRemaining = 30
 }
