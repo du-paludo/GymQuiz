@@ -71,6 +71,7 @@ class QuestionRepository: ObservableObject {
             currentQuestion = question
             index += 1
             questions.remove(at: 0)
+            print(index)
             if index == 11 {
                 empty = true
             }

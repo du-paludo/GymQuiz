@@ -28,6 +28,7 @@ struct ScoreView: View {
             Spacer()
             Text(text)
                 .foregroundColor(.white)
+                .multilineTextAlignment(.center)
                 .font(.title)
                 .bold()
             Text("\(settings.score) points")
@@ -37,7 +38,7 @@ struct ScoreView: View {
             VStack(spacing: 24) {
                 Button {
                     withAnimation() {
-                        manager.size = 1000
+                        manager.size = 1200
                         manager.color = "bg"
                         //manager.animation = .scale
                         //manager.animation = .scale(scale: 0.6, anchor: .center)

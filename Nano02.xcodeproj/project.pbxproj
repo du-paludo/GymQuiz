@@ -61,6 +61,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812EB52D2A8035AD00D461D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				812EB5212A7BCE4200D461D4 /* SceneManagerView.swift */,
+				812EB5252A7C9E6C00D461D4 /* CircleView.swift */,
+				8163C9A72A7B472200DBBD4C /* HomeView.swift */,
+				8198A3422A7934E3001F0028 /* GameView.swift */,
+				8163C9A02A7AFD6600DBBD4C /* UpperBar.swift */,
+				816E9FF82A79B56F007F94EA /* QuestionView.swift */,
+				816E9FF02A79AD82007F94EA /* ListItem.swift */,
+				8163C9A22A7AFF7100DBBD4C /* ScoreView.swift */,
+				812EB52B2A7D1FD600D461D4 /* LeaderboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		812EB52E2A80365000D461D4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				812EB5232A7BCE7900D461D4 /* SceneManager.swift */,
+				81BB1C2B2A79C9AE006894BB /* GameSettings.swift */,
+				8163C9982A7A7D7900DBBD4C /* QuestionRepository.swift */,
+				816E9FF42A79B4AE007F94EA /* Question.swift */,
+				816E9FF22A79AE9B007F94EA /* Option.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		812EB52F2A80369200D461D4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				812EB51F2A7B488F00D461D4 /* Assets.xcassets */,
+				8163C9A42A7B3E2C00DBBD4C /* PassionOne-Bold.ttf */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		8198A3342A7934E3001F0028 = {
 			isa = PBXGroup;
 			children = (
@@ -82,22 +119,9 @@
 			children = (
 				8163C9A62A7B3F8000DBBD4C /* Info.plist */,
 				8198A3402A7934E3001F0028 /* Nano02App.swift */,
-				816E9FF02A79AD82007F94EA /* ListItem.swift */,
-				816E9FF82A79B56F007F94EA /* QuestionView.swift */,
-				8198A3422A7934E3001F0028 /* GameView.swift */,
-				8163C9A72A7B472200DBBD4C /* HomeView.swift */,
-				812EB5212A7BCE4200D461D4 /* SceneManagerView.swift */,
-				812EB5232A7BCE7900D461D4 /* SceneManager.swift */,
-				81BB1C2B2A79C9AE006894BB /* GameSettings.swift */,
-				816E9FF22A79AE9B007F94EA /* Option.swift */,
-				812EB5252A7C9E6C00D461D4 /* CircleView.swift */,
-				8163C9A02A7AFD6600DBBD4C /* UpperBar.swift */,
-				812EB52B2A7D1FD600D461D4 /* LeaderboardView.swift */,
-				8163C9A22A7AFF7100DBBD4C /* ScoreView.swift */,
-				8163C9A42A7B3E2C00DBBD4C /* PassionOne-Bold.ttf */,
-				816E9FF42A79B4AE007F94EA /* Question.swift */,
-				812EB51F2A7B488F00D461D4 /* Assets.xcassets */,
-				8163C9982A7A7D7900DBBD4C /* QuestionRepository.swift */,
+				812EB52D2A8035AD00D461D4 /* Views */,
+				812EB52F2A80369200D461D4 /* Assets */,
+				812EB52E2A80365000D461D4 /* Helpers */,
 				8198A3462A7934E5001F0028 /* Preview Content */,
 			);
 			path = Nano02;
@@ -341,9 +365,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.GymQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -371,9 +398,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.GymQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -22,7 +22,7 @@ struct HomeView: View {
                 VStack(spacing: 24) {
                     Button {
                         withAnimation(.spring()) {
-                            manager.size = 1000
+                            manager.size = 1200
                             manager.color = "bg"
                             manager.animation = .opacity
                             manager.currentView = .GameView
@@ -42,7 +42,7 @@ struct HomeView: View {
                     }
                     Button {
                         withAnimation() {
-                            manager.size = 1000
+                            manager.size = 1200
                             manager.color = "orange"
                             manager.currentView = .LeaderboardView
                         }

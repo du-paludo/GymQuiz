@@ -1,10 +1,3 @@
-//
-//  QuestionView.swift
-//  Nano02
-//
-//  Created by Eduardo Stefanel Paludo on 01/08/23.
-//
-
 import SwiftUI
 
 struct QuestionView: View {
@@ -56,7 +49,7 @@ struct QuestionView: View {
                                         }
                                     } else {
                                         selectedOption = nil
-                                        settings.timeRemaining = 20
+                                        settings.timeRemaining = 30
                                     }
                                 }
                             }

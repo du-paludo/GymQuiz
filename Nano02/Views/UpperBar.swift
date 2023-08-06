@@ -55,7 +55,16 @@ struct UpperBar: View {
                             settings.timeRemaining -= 1
                         } else {
                             repo.getNextQuestion()
-                            settings.timeRemaining = 30
+                            if repo.empty {
+                                withAnimation {
+                                    manager.size = 600
+                                    manager.color = "bg"
+                                    manager.animation = .scale
+                                    manager.currentView = .ScoreView
+                                }
+                            } else {
+                                settings.timeRemaining = 30
+                            }
                         }
                     }
                     .foregroundColor(.white)

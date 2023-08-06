@@ -25,6 +25,6 @@ struct CircleView: View {
 
 struct CircleView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleView(size: 1000, color: "bg", namespace: Namespace().wrappedValue)
+        CircleView(size: 1200, color: "bg", namespace: Namespace().wrappedValue)
     }
 }
