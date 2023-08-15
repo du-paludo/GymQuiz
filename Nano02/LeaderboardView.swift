@@ -41,7 +41,7 @@ struct LeaderboardView: View {
         
     func loadLeaderboard() async {
         Task {
-            var playersListTemp : [Player] = []
+            var playersListTemp: [Player] = []
             let leaderboards = try await GKLeaderboard.loadLeaderboards(IDs: [leaderboardIdentifier])
             if let leaderboard = leaderboards.first {
                 let allPlayers = try await leaderboard.loadEntries(for: .global, timeScope: .allTime, range: NSRange(1...5))
@@ -115,7 +115,7 @@ struct LeaderboardView: View {
         .onAppear() {
             if !GKLocalPlayer.local.isAuthenticated {
                 authenticateUser()
-            } else if playersList.count == 0 {
+            } else {
                 Task {
                     await loadLeaderboard()
                 }
